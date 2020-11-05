@@ -1,0 +1,79 @@
+composers
+bestknown
+influencedby
+hasinfluenced
+notableworkd
+similarcomposer
+
+CREATE TABLE `notableworks` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `composerid` varchar(10) NOT NULL,
+ `notablework` varchar(300) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=50714 DEFAULT CHARSET=utf8
+
+CREATE TABLE `similarcomposer` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `composerid` varchar(10) NOT NULL,
+ `similarcomposer` varchar(50) NOT NULL,
+ `rank` varchar(10) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=142336 DEFAULT CHARSET=utf8
+
+CREATE TABLE `bestknown` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `composerid` varchar(10) NOT NULL,
+ `bestknownfor` varchar(150) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=24446 DEFAULT CHARSET=utf8
+
+CREATE TABLE `influencedby` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `composerid` varchar(10) NOT NULL,
+ `influencedby` varchar(50) NOT NULL,
+ `ages` varchar(10) NOT NULL,
+ `doubt` varchar(10) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=93513 DEFAULT CHARSET=utf
+
+CREATE TABLE `hasinfluenced` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `composerid` varchar(10) NOT NULL,
+ `hasinfluenced` varchar(50) NOT NULL,
+ `ages` varchar(10) NOT NULL,
+ `doubt` varchar(10) NOT NULL,
+ `rank` varchar(10) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=109900 DEFAULT CHARSET=utf8
+
+
+CREATE TABLE `composers` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `composerid` varchar(10) NOT NULL,
+ `composer` varchar(100) NOT NULL,
+ `composershortname` varchar(40) NOT NULL,
+ `genreprofile` varchar(100) NOT NULL,
+ `gender` varchar(10) NOT NULL,
+ `styledescription` varchar(100) NOT NULL,
+ `period` varchar(100) NOT NULL,
+ `basedon` varchar(100) NOT NULL,
+ `overallrank` varchar(50) NOT NULL,
+ `dateborn` varchar(10) NOT NULL,
+ `datedeceased` varchar(10) NOT NULL,
+ `nationality` varchar(50) NOT NULL,
+ `style` varchar(100) NOT NULL,
+ `dateborncentury` varchar(10) NOT NULL,
+ `agedied` varchar(10) NOT NULL,
+ `firstname` varchar(100) NOT NULL,
+ `lastname` varchar(100) NOT NULL,
+ `mainrank` varchar(10) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9640 DEFAULT CHARSET=utf8
+
+CREATE TABLE `similarcomposer` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `composerid` varchar(10) NOT NULL,
+ `similarcomposer` varchar(50) NOT NULL,
+ `rank` varchar(10) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=142336 DEFAULT CHARSET=utf8
